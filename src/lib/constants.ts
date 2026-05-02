@@ -9,7 +9,7 @@ import { Service, CaseStudy, TestimonialCard } from './types';
 
 export const POSITIONING = {
   primary:
-    'I build secure, efficient, and easy-To-Use digital systems that save lives, protect communities, attract funding, and scale impact—without technical stress.',
+    'I build secure, efficient, and easy-To-Use digital systems, that help scale impact—without technical stress.',
   supporting:
     'Professional websites, data systems, automation, and technical support for organizations that need reliability, credibility, and results.',
   taglines: [
