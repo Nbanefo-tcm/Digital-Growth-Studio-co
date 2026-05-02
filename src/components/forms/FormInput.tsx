@@ -1,0 +1,62 @@
+'use client';
+
+import React from 'react';
+import { FieldError } from 'react-hook-form';
+import { cn } from '@/lib/utils';
+
+interface FormInputProps
+  extends React.InputHTMLAttributes<HTMLInputElement> {
+  label?: string;
+  error?: FieldError | undefined;
+  helperText?: string;
+  required?: boolean;
+}
+
+export const FormInput = React.forwardRef<HTMLInputElement, FormInputProps>(
+  (
+    {
+      label,
+      error,
+      helperText,
+      required,
+      type = 'text',
+      className,
+      ...props
+    },
+    ref
+  ) => {
+    return (
+      <div className="flex flex-col gap-2">
+        {label && (
+          <label className="text-sm font-semibold text-neutral-700">
+            {label}
+            {required && <span className="text-error ml-1">*</span>}
+          </label>
+        )}
+
+        <input
+          ref={ref}
+          type={type}
+          className={cn(
+            'w-full px-4 py-3 border-2 border-neutral-300 rounded-md font-base text-neutral-800 transition-all duration-200 ease-in-out placeholder:text-neutral-400 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-100 disabled:bg-neutral-100 disabled:cursor-not-allowed disabled:opacity-50',
+            error && 'border-error focus:border-error focus:ring-red-100',
+            className
+          )}
+          {...props}
+        />
+
+        {error && (
+          <span className="text-sm font-medium text-error">{error.message}</span>
+        )}
+
+        {helperText && !error && (
+          <span className="text-sm text-neutral-500">{helperText}</span>
+        )}
+      </div>
+    );
+  }
+);
+
+FormInput.displayName = 'FormInput';
+
+export default FormInput;

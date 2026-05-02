@@ -1,0 +1,109 @@
+/* Design System Variables - Reference only */
+:root {
+  /* Color Variables */
+  --clr-primary-50: #f0f7ff;
+  --clr-primary-100: #e0effe;
+  --clr-primary-200: #bae0fe;
+  --clr-primary-300: #7cc8fe;
+  --clr-primary-400: #36b0ff;
+  --clr-primary-500: #0b84f3;
+  --clr-primary-600: #0661d6;
+  --clr-primary-700: #0549b5;
+  --clr-primary-800: #063b93;
+  --clr-primary-900: #052859;
+  --clr-primary-950: #031b3d;
+
+  --clr-accent-50: #f0fdf4;
+  --clr-accent-100: #dcfce7;
+  --clr-accent-200: #bbf7d0;
+  --clr-accent-300: #86efac;
+  --clr-accent-400: #4ade80;
+  --clr-accent-500: #22c55e;
+  --clr-accent-600: #16a34a;
+  --clr-accent-700: #15803d;
+  --clr-accent-800: #166534;
+  --clr-accent-900: #145231;
+  --clr-accent-950: #0c2818;
+
+  --clr-neutral-50: #f9fafb;
+  --clr-neutral-100: #f3f4f6;
+  --clr-neutral-200: #e5e7eb;
+  --clr-neutral-300: #d1d5db;
+  --clr-neutral-400: #9ca3af;
+  --clr-neutral-500: #6b7280;
+  --clr-neutral-600: #4b5563;
+  --clr-neutral-700: #374151;
+  --clr-neutral-800: #1f2937;
+  --clr-neutral-900: #111827;
+  --clr-neutral-950: #030712;
+
+  /* Typography Variables */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.25rem;
+  --fs-2xl: 1.5rem;
+  --fs-3xl: 1.875rem;
+  --fs-4xl: 2.25rem;
+  --fs-5xl: 3rem;
+  --fs-6xl: 3.75rem;
+
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+
+  --lh-tight: 1.2;
+  --lh-snug: 1.4;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.625;
+  --lh-loose: 1.75;
+
+  /* Spacing Variables */
+  --sp-0: 0;
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.25rem;
+  --sp-6: 1.5rem;
+  --sp-7: 1.75rem;
+  --sp-8: 2rem;
+  --sp-9: 2.25rem;
+  --sp-10: 2.5rem;
+  --sp-12: 3rem;
+  --sp-14: 3.5rem;
+  --sp-16: 4rem;
+  --sp-20: 5rem;
+  --sp-24: 6rem;
+  --sp-28: 7rem;
+  --sp-32: 8rem;
+
+  /* Border Radius Variables */
+  --radius-0: 0;
+  --radius-sm: 0.25rem;
+  --radius-base: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-full: 9999px;
+
+  /* Shadow Variables */
+  --shadow-none: none;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* Transition Variables */
+  --transition-fast: 75ms;
+  --transition-standard: 150ms;
+  --transition-smooth: 200ms;
+}
