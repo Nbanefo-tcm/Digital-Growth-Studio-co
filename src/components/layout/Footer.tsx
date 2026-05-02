@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Mail, Phone, MessageSquare } from 'lucide-react';
+import { Mail, Phone, MessageSquare, Linkedin, Facebook, Twitter, Instagram } from 'lucide-react';
 
 interface FooterLink {
   label: string;
@@ -108,9 +108,56 @@ export const Footer: React.FC<FooterProps> = ({
             </div>
           </div>
 
-          {/* Trust Badges */}
+          {/* Social Media */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Trusted By</h4>
+            <h4 className="text-lg font-semibold mb-4">Connect With Us</h4>
+            <div className="flex gap-4 mb-4">
+              <a
+                href="https://wa.me/2348124808253"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center hover:bg-green-700 transition-colors duration-200"
+                aria-label="WhatsApp"
+              >
+                <Phone className="w-5 h-5 text-white" />
+              </a>
+              <a
+                href="https://linkedin.com/company/digital-growth-studio"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors duration-200"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-5 h-5 text-white" />
+              </a>
+              <a
+                href="https://facebook.com/digitalgrowthstudio"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center hover:bg-blue-800 transition-colors duration-200"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-5 h-5 text-white" />
+              </a>
+              <a
+                href="https://twitter.com/digitalgrowthstu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-black rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors duration-200"
+                aria-label="Twitter"
+              >
+                <Twitter className="w-5 h-5 text-white" />
+              </a>
+              <a
+                href="https://instagram.com/digitalgrowthstudio"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 rounded-full flex items-center justify-center hover:opacity-90 transition-opacity duration-200"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-5 h-5 text-white" />
+              </a>
+            </div>
             <ul className="space-y-2 text-sm text-neutral-400">
               <li>✓ NGO & Nonprofit Experts</li>
               <li>✓ Security-First Design</li>
