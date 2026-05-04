@@ -7,8 +7,9 @@ import { cn } from '@/lib/utils';
 interface FormCheckboxProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
-  error?: FieldError | undefined;
+  error?: FieldError | string | undefined;
   helperText?: string;
+  onChange?: (value: boolean) => void;
 }
 
 export const FormCheckbox = React.forwardRef<HTMLInputElement, FormCheckboxProps>(
@@ -24,6 +25,12 @@ export const FormCheckbox = React.forwardRef<HTMLInputElement, FormCheckboxProps
               error && 'border-error',
               className
             )}
+            onChange={(e) => {
+              const customOnChange = props.onChange;
+              if (customOnChange) {
+                customOnChange(e.target.checked);
+              }
+            }}
             {...props}
           />
 
@@ -35,7 +42,9 @@ export const FormCheckbox = React.forwardRef<HTMLInputElement, FormCheckboxProps
         </div>
 
         {error && (
-          <span className="text-sm font-medium text-error ml-8">{error.message}</span>
+          <span className="text-sm font-medium text-error ml-8">
+            {typeof error === 'string' ? error : error.message}
+          </span>
         )}
 
         {helperText && !error && (

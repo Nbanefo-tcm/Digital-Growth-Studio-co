@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils';
 interface FormSelectProps
   extends React.SelectHTMLAttributes<HTMLSelectElement> {
   label?: string;
-  error?: FieldError | undefined;
+  error?: FieldError | string | undefined;
   helperText?: string;
   required?: boolean;
   options: Array<{
@@ -15,6 +15,7 @@ interface FormSelectProps
     label: string;
   }>;
   placeholder?: string;
+  onChange?: (value: string) => void;
 }
 
 export const FormSelect = React.forwardRef<HTMLSelectElement, FormSelectProps>(
@@ -47,6 +48,12 @@ export const FormSelect = React.forwardRef<HTMLSelectElement, FormSelectProps>(
             error && 'border-error focus:border-error focus:ring-red-100',
             className
           )}
+          onChange={(e) => {
+            const customOnChange = props.onChange;
+            if (customOnChange) {
+              customOnChange(e.target.value);
+            }
+          }}
           {...props}
         >
           {placeholder && (
@@ -62,7 +69,9 @@ export const FormSelect = React.forwardRef<HTMLSelectElement, FormSelectProps>(
         </select>
 
         {error && (
-          <span className="text-sm font-medium text-error">{error.message}</span>
+          <span className="text-sm font-medium text-error">
+            {typeof error === 'string' ? error : error.message}
+          </span>
         )}
 
         {helperText && !error && (

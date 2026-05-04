@@ -35,7 +35,7 @@ export const Footer: React.FC<FooterProps> = ({
   companyName = 'Digital Growth Studio',
   tagline = 'Professional digital solutions for NGOs & impact organizations',
   email = 'DigitalGrowthStudio@outlook.com',
-  phone = '+(234) 8124808253',
+  phone = '+1 (945) 391-1924',
   whatsapp ,
   footerLinks = defaultFooterLinks,
   legalLinks = defaultLegalLinks,
@@ -113,7 +113,7 @@ export const Footer: React.FC<FooterProps> = ({
             <h4 className="text-lg font-semibold mb-4">Connect With Us</h4>
             <div className="flex gap-4 mb-4">
               <a
-                href="https://wa.me/2348124808253"
+                href="https://wa.me/19453911924"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center hover:bg-green-700 transition-colors duration-200"

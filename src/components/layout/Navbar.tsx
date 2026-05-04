@@ -30,7 +30,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   logoText = 'Digital Growth Studio',
   navItems = defaultNavItems,
   ctaLabel = 'Book Consultation',
-  ctaHref = '/consultation',
+  ctaHref = '/contact?type=consultation',
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
