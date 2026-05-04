@@ -2,8 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  output: 'export',
-  trailingSlash: true,
   images: {
     remotePatterns: [
       {
@@ -11,7 +9,7 @@ const nextConfig = {
         hostname: '**',
       },
     ],
-    unoptimized: true,
+    unoptimized: false,
   },
   headers: async () => {
     return [
