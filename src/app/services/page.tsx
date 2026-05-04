@@ -70,7 +70,7 @@ export default function ServicesPage() {
 
                     {/* Explore Packages CTA */}
                     <Link
-                      href={`/services/${service.slug}`}
+                      href={`/packages?service=${service.slug}`}
                       className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary-500 text-white font-semibold rounded-lg hover:bg-primary-600 transition-colors duration-200"
                     >
                       Explore Packages
