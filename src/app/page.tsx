@@ -79,7 +79,7 @@ export default function Home() {
               href="/portfolio"
               className="px-8 py-3 border-2 border-primary-500 text-primary-500 font-semibold rounded-lg hover:bg-primary-50 transition-colors duration-200"
             >
-              View My Works
+              View Works
             </Link>
           </div>
         </div>
