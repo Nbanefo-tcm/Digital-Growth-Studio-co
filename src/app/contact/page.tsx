@@ -325,7 +325,7 @@ export default function ContactPage() {
                   label="I consent to be contacted via email, phone, or WhatsApp regarding my inquiry."
                   name="consent"
                   checked={formData.consent}
-                  onChange={(checked) => handleChange('consent', checked)}
+                  onChange={(e) => handleChange('consent', e.target.checked)}
                   error={errors.consent}
                 />
               </div>

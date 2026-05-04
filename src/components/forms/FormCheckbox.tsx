@@ -5,11 +5,11 @@ import { FieldError } from 'react-hook-form';
 import { cn } from '@/lib/utils';
 
 interface FormCheckboxProps
-  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onChange'> {
+  extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   error?: FieldError | string | undefined;
   helperText?: string;
-  onChange?: (value: boolean) => void;
+  onValueChange?: (value: boolean) => void;
 }
 
 export const FormCheckbox = React.forwardRef<HTMLInputElement, FormCheckboxProps>(
@@ -26,7 +26,7 @@ export const FormCheckbox = React.forwardRef<HTMLInputElement, FormCheckboxProps
               className
             )}
             onChange={(e) => {
-              const customOnChange = props.onChange;
+              const customOnChange = props.onValueChange;
               if (customOnChange) {
                 customOnChange(e.target.checked);
               }
