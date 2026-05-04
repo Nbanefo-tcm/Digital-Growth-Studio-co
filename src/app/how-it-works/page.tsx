@@ -1,12 +1,10 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
-import { FAQ, SERVICES } from '@/lib/constants';
+import { FAQ } from '@/lib/constants';
 import SectionHeader from '@/components/sections/SectionHeader';
 import CTABlock from '@/components/sections/CTABlock';
 import { 
   Search,
   Shield,
-  Code,
   TestTube,
   Rocket,
   Headphones,

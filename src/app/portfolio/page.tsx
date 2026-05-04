@@ -1,17 +1,14 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
 import { CASE_STUDIES, TESTIMONIALS } from '@/lib/constants';
 import SectionHeader from '@/components/sections/SectionHeader';
 import CTABlock from '@/components/sections/CTABlock';
 import { 
-  Globe,
-  Database,
-  Zap,
-  TrendingUp,
-  Award,
-  ExternalLink,
-  Quote,
-  ArrowRight
+  Globe, 
+  Database, 
+  Zap, 
+  TrendingUp, 
+  Award, 
+  Quote
 } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -25,14 +22,6 @@ export const metadata: Metadata = {
     'automation examples',
     'NGO success stories',
   ],
-};
-
-const serviceIconMap: Record<string, React.ReactNode> = {
-  'website-development': <Globe className="w-6 h-6 text-primary-500" />,
-  'online-forms-automation': <Zap className="w-6 h-6 text-primary-500" />,
-  'website-fixes-support': <Database className="w-6 h-6 text-primary-500" />,
-  'ngo-nonprofit-websites': <Globe className="w-6 h-6 text-primary-500" />,
-  'research-reporting': <Database className="w-6 h-6 text-primary-500" />,
 };
 
 export default function PortfolioPage() {

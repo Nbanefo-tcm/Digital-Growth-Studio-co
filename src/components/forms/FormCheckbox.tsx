@@ -5,7 +5,7 @@ import { FieldError } from 'react-hook-form';
 import { cn } from '@/lib/utils';
 
 interface FormCheckboxProps
-  extends React.InputHTMLAttributes<HTMLInputElement> {
+  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onChange'> {
   label?: string;
   error?: FieldError | string | undefined;
   helperText?: string;

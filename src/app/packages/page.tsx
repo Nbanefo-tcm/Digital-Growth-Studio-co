@@ -1,6 +1,5 @@
 'use client';
 
-import { Metadata } from 'next';
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
@@ -15,16 +14,8 @@ import {
   Database, 
   Check, 
   Clock, 
-  DollarSign, 
-  ArrowRight,
-  Star,
   Shield
 } from 'lucide-react';
-
-// This would typically be in a separate metadata export, but for client components
-// we'll handle it differently
-const pageTitle = 'Service Packages | Digital Growth Studio';
-const pageDescription = 'Explore our comprehensive service packages with transparent pricing. Website development, data systems, automation, and technical support solutions for NGOs and impact organizations.';
 
 const iconMap: Record<string, React.ReactNode> = {
   Globe: <Globe className="w-8 h-8 text-primary-500" />,
@@ -150,7 +141,7 @@ export default function PackagesPage() {
 
                 {/* Packages Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {service.packages.map((pkg, index) => (
+                  {service.packages.map((pkg) => (
                     <div
                       key={pkg.name}
                       className={`bg-white rounded-lg border-2 ${

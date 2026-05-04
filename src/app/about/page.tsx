@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
 import { POSITIONING, WHY_CHOOSE_ME, TARGET_USERS } from '@/lib/constants';
 import SectionHeader from '@/components/sections/SectionHeader';
 import CTABlock from '@/components/sections/CTABlock';
@@ -16,7 +15,6 @@ import {
   Building2,
   Users,
   Award,
-  Clock,
   CheckCircle
 } from 'lucide-react';
 
