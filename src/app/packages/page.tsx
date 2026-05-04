@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { SERVICES } from '@/lib/constants';
@@ -25,7 +25,7 @@ const iconMap: Record<string, React.ReactNode> = {
   Database: <Database className="w-8 h-8 text-primary-500" />,
 };
 
-export default function PackagesPage() {
+function PackagesPageContent() {
   const searchParams = useSearchParams();
   const [selectedService, setSelectedService] = useState<string>('');
   const [filteredPackages, setFilteredPackages] = useState(SERVICES);
@@ -280,5 +280,13 @@ export default function PackagesPage() {
         variant="light"
       />
     </main>
+  );
+}
+
+export default function PackagesPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
+      <PackagesPageContent />
+    </Suspense>
   );
 }

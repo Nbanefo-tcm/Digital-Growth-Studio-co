@@ -15,7 +15,7 @@ interface FormSelectProps
     label: string;
   }>;
   placeholder?: string;
-  onChange?: (value: string) => void;
+  onValueChange?: (value: string) => void;
 }
 
 export const FormSelect = React.forwardRef<HTMLSelectElement, FormSelectProps>(
@@ -49,7 +49,7 @@ export const FormSelect = React.forwardRef<HTMLSelectElement, FormSelectProps>(
             className
           )}
           onChange={(e) => {
-            const customOnChange = props.onChange;
+            const customOnChange = props.onValueChange;
             if (customOnChange) {
               customOnChange(e.target.value);
             }

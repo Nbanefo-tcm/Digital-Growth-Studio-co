@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { Mail, Phone, MessageSquare, CheckCircle, AlertCircle } from 'lucide-react';
@@ -25,7 +25,7 @@ interface FormErrors {
   [key: string]: string;
 }
 
-export default function ContactPage() {
+function ContactPageContent() {
   const searchParams = useSearchParams();
   const contactType = searchParams.get('type') || 'general';
   const isConsultation = contactType === 'consultation';
@@ -238,7 +238,7 @@ export default function ContactPage() {
                     label="Full Name *"
                     name="name"
                     value={formData.name}
-                    onChange={(value) => handleChange('name', value)}
+                    onValueChange={(value) => handleChange('name', value)}
                     error={errors.name}
                     required
                   />
@@ -247,7 +247,7 @@ export default function ContactPage() {
                     name="email"
                     type="email"
                     value={formData.email}
-                    onChange={(value) => handleChange('email', value)}
+                    onValueChange={(value) => handleChange('email', value)}
                     error={errors.email}
                     required
                   />
@@ -255,7 +255,7 @@ export default function ContactPage() {
                     label="Phone Number *"
                     name="phone"
                     value={formData.phone}
-                    onChange={(value) => handleChange('phone', value)}
+                    onValueChange={(value) => handleChange('phone', value)}
                     error={errors.phone}
                     required
                   />
@@ -263,7 +263,7 @@ export default function ContactPage() {
                     label="Organization Name *"
                     name="organization"
                     value={formData.organization}
-                    onChange={(value) => handleChange('organization', value)}
+                    onValueChange={(value) => handleChange('organization', value)}
                     error={errors.organization}
                     required
                   />
@@ -279,7 +279,7 @@ export default function ContactPage() {
                       label="Service of Interest *"
                       name="service"
                       value={formData.service}
-                      onChange={(value) => handleChange('service', value)}
+                      onValueChange={(value) => handleChange('service', value)}
                       options={serviceOptions}
                       error={errors.service}
                     />
@@ -287,7 +287,7 @@ export default function ContactPage() {
                       label="Budget Range"
                       name="budget"
                       value={formData.budget}
-                      onChange={(value) => handleChange('budget', value)}
+                      onValueChange={(value) => handleChange('budget', value)}
                       options={budgetOptions}
                     />
                   </div>
@@ -296,7 +296,7 @@ export default function ContactPage() {
                       label="Timeline"
                       name="timeline"
                       value={formData.timeline}
-                      onChange={(value) => handleChange('timeline', value)}
+                      onValueChange={(value) => handleChange('timeline', value)}
                       options={timelineOptions}
                     />
                   </div>
@@ -312,7 +312,7 @@ export default function ContactPage() {
                   label={isConsultation ? 'Describe your current challenges and what you\'re trying to achieve *' : 'How can we help you? *'}
                   name="message"
                   value={formData.message}
-                  onChange={(value) => handleChange('message', value)}
+                  onValueChange={(value) => handleChange('message', value)}
                   error={errors.message}
                   rows={6}
                   required
@@ -325,7 +325,7 @@ export default function ContactPage() {
                   label="I consent to be contacted via email, phone, or WhatsApp regarding my inquiry."
                   name="consent"
                   checked={formData.consent}
-                  onChange={(e) => handleChange('consent', e.target.checked)}
+                  onValueChange={(value) => handleChange('consent', value)}
                   error={errors.consent}
                 />
               </div>
@@ -392,5 +392,13 @@ export default function ContactPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function ContactPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
+      <ContactPageContent />
+    </Suspense>
   );
 }

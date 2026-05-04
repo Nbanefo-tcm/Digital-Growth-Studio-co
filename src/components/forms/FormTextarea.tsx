@@ -10,7 +10,7 @@ interface FormTextareaProps
   error?: FieldError | string | undefined;
   helperText?: string;
   required?: boolean;
-  onChange?: (value: string) => void;
+  onValueChange?: (value: string) => void;
 }
 
 export const FormTextarea = React.forwardRef<
@@ -38,7 +38,7 @@ export const FormTextarea = React.forwardRef<
             className
           )}
           onChange={(e) => {
-            const customOnChange = props.onChange;
+            const customOnChange = props.onValueChange;
             if (customOnChange) {
               customOnChange(e.target.value);
             }
