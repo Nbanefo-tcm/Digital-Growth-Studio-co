@@ -19,8 +19,8 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'About Digital Growth Studio | Professional Digital Systems',
-  description: 'Learn about Digital Growth Studio - building secure, efficient digital systems for NGOs, nonprofits, and impact organizations. Security-first, transparent pricing, measurable results.',
+  title: 'About Digital Growth Studio & Co. | Professional Digital Systems',
+  description: 'Learn about Digital Growth Studio & Co. - building secure, efficient digital systems for NGOs, nonprofits, and impact organizations. Security-first, transparent pricing, measurable results.',
   keywords: [
     'about digital growth studio',
     'NGO digital consultant',
@@ -51,7 +51,7 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto px-4 md:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-neutral-900 mb-6">
-              About Digital Growth Studio
+              About Digital Growth Studio & Co.
             </h1>
             <p className="text-xl md:text-2xl text-neutral-700 mb-8 leading-relaxed">
               {POSITIONING.primary}

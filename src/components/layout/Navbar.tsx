@@ -27,7 +27,7 @@ const defaultNavItems: NavItem[] = [
 
 export const Navbar: React.FC<NavbarProps> = ({
   logo,
-  logoText = 'Digital Growth Studio',
+  logoText = 'Digital Growth Studio & Co.',
   navItems = defaultNavItems,
   ctaLabel = 'Book Consultation',
   ctaHref = '/contact?type=consultation',

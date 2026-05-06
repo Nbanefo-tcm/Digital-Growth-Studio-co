@@ -14,7 +14,7 @@ import ServiceCard from '@/components/cards/ServiceCard';
 import { Globe, Database, Zap, Headphones, Heart, Briefcase, Building2 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Digital Growth Studio ',
+  title: 'Digital Growth Studio & Co.',
   description:
     'I build secure, efficient, and easy-To-Use digital systems that save lives, protect communities, attract funding, and scale impact—without technical stress.',
   keywords: [

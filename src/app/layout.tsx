@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     'digital transformation',
   ],
   authors: [{ name: 'Digital Systems Consultant' }],
+  icons: {
+    icon: '/favicon.png',
+  },
   openGraph: {
     title: 'Digital Systems Consultant | NGOs & Impact Organizations',
     description:

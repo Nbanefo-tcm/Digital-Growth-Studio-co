@@ -12,7 +12,7 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Portfolio | Digital Growth Studio Case Studies',
+  title: 'Portfolio | Digital Growth Studio & Co. Case Studies',
   description: 'See our work: websites that tripled inquiries, data systems that proved impact, and automation that freed 20+ hours per week. Real results for real organizations.',
   keywords: [
     'portfolio',

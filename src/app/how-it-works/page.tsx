@@ -19,7 +19,7 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'How It Works | Digital Growth Studio Process',
+  title: 'How It Works | Digital Growth Studio & Co. Process',
   description: 'Learn our systematic approach to building secure, efficient digital systems. From discovery to launch, we ensure your project succeeds on time and on budget.',
   keywords: [
     'how it works',

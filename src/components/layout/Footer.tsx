@@ -32,7 +32,7 @@ const defaultLegalLinks: FooterLink[] = [
 ];
 
 export const Footer: React.FC<FooterProps> = ({
-  companyName = 'Digital Growth Studio',
+  companyName = 'Digital Growth Studio & Co.',
   tagline = 'Professional digital solutions for NGOs & impact organizations',
   email = 'DigitalGrowthStudio@outlook.com',
   phone = '+1 (945) 391-1924',
